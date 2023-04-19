@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          テストです
+        テストですテストですテストですテストですテストですテストですテストですテストです
         </p>
         <a
           className="App-link"
@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          test
+          testtesttesttesttesttest
         </a>
       </header>
     </div>
