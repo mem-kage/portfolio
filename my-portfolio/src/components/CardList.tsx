@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 type CardListProps = {
-  cards: {
+  genre: {
     title: string;
-    description: string;
+    tag: string;
   }[];
 };
 
-const CardList = ({ cards }: CardListProps) => {
+const CardList = ({ genre }: CardListProps) => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch("../sample.json")
+      .then((response) => response.json())
+      // .then((data) => setItems(data));
+  }, []);
+  
   return (
     <div>
-      {cards.map((card, index) => (
-        <Card key={index} title={card.title} description={card.description} />
-      ))}
     </div>
   );
 };

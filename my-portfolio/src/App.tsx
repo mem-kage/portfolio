@@ -1,22 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CardList from './components/CardList';
 
-const cards = [
+const genre = [
   {
-    title: 'Webデザイン',
-    description: 'ウェブサイトやランディングページのデザイン作成',
+    title: 'Webアプリ開発',
+    tag: 'app',
   },
   {
-    title: 'ロゴデザイン',
-    description: '企業やブランドのロゴマークのデザイン作成',
-  },
-  {
-    title: 'Web開発',
-    description: 'React、Node.jsを用いたWebアプリケーションの開発',
-  },
-  {
-    title: 'アプリ開発',
-    description: 'iOS、Androidアプリの開発',
+    title: 'デザイン',
+    tag: 'design',
   },
 ];
 
@@ -24,7 +16,7 @@ const App = () => {
   return (
     <div>
       <h1>My Portfolio</h1>
-      <CardList cards={cards} />
+      <CardList genre={genre} />
     </div>
   );
 };

@@ -3,14 +3,12 @@ import "../styles/components/Card.scss";
 
 type CardProps = {
   title: string;
-  description: string;
 };
 
-const Card = ({ title, description }: CardProps) => {
+const Card = ({ title }: CardProps) => {
   return (
     <div className='card'>
       <h2>{title}</h2>
-      <p>{description}</p>
     </div>
   );
 };
