@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
+import Sample from '../sample.json';
 
 type CardListProps = {
   genre: {
@@ -9,16 +10,20 @@ type CardListProps = {
 };
 
 const CardList = ({ genre }: CardListProps) => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    fetch("../sample.json")
-      .then((response) => response.json())
-      // .then((data) => setItems(data));
-  }, []);
+  const appList = Sample;
+  console.log(appList.app)
   
   return (
     <div>
+      {genre.map((item, index) => (
+        // <Card key={index} title={card.title} description={card.description} />
+        Sample.app.map((a,index) => (
+          <>
+          <p>{a.id}</p>
+          <p>{a.tag}</p>
+          </>
+        ))
+      ))}
     </div>
   );
 };

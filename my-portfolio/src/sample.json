@@ -3,24 +3,24 @@
     {
       "id": 1,
       "title": "The Dark Knight",
-      "key": "the-dark-knight"
+      "tag": "the-dark-knight"
     },
     {
       "id": 2,
       "title": "Inception",
-      "key": "inception"
+      "tag": "inception"
     }
   ],
   "design": [
     {
       "id": 3,
       "title": "The Hangover",
-      "key": "the-hangover"
+      "tag": "the-hangover"
     },
     {
       "id": 4,
       "title": "Bridesmaids",
-      "key": "bridesmaids"
+      "tag": "bridesmaids"
     }
   ]
 }
