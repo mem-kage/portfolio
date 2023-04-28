@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
-import Sample from '../sample.json';
+import data from '../sample.json';
 
 type CardListProps = {
   genre: {
@@ -9,20 +9,16 @@ type CardListProps = {
   }[];
 };
 
-const CardList = ({ genre }: CardListProps) => {
-  const appList = Sample;
-  console.log(appList.app)
-  
+const CardList = ({ genre }: CardListProps) => {  
   return (
     <div>
-      {genre.map((item, index) => (
-        // <Card key={index} title={card.title} description={card.description} />
-        Sample.app.map((a,index) => (
-          <>
-          <p>{a.id}</p>
-          <p>{a.tag}</p>
-          </>
-        ))
+      {Object.entries(data).map(([key, values], index) => (
+        <div key={key}>
+          <h2>{genre[index].title}</h2>
+          {values.map((value) => (
+            <Card id={value.id} title={value.title} />
+          ))}
+        </div>
       ))}
     </div>
   );
