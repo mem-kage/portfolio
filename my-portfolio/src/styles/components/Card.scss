@@ -29,3 +29,9 @@ p {
   color: #666;
   margin-bottom: 24px;
 }
+
+@media (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+}
