@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import CardList from './components/CardList';
 
-function App() {
+const genre = [
+  {
+    title: 'Webアプリ開発',
+    tag: 'app',
+  },
+  {
+    title: 'デザイン',
+    tag: 'design',
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        ポートフィリオ
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         test
-        </a>
-      </header>
+    <div>
+      <h1>My Portfolio</h1>
+      <CardList genre={genre} />
     </div>
   );
-}
+};
 
 export default App;
