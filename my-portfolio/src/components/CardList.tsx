@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import data from '../sample.json';
+import "../styles/components/CardList.scss";
 
 type CardListProps = {
   genre: {
@@ -13,11 +14,13 @@ const CardList = ({ genre }: CardListProps) => {
   return (
     <div>
       {Object.entries(data).map(([key, values], index) => (
-        <div key={key}>
+        <div className='cardAreaWrapper' key={key}>
           <h2>{genre[index].title}</h2>
-          {values.map((value) => (
-            <Card id={value.id} title={value.title} />
-          ))}
+          <div className='cardList'>
+            {values.map((value) => (
+              <Card id={value.id} title={value.title} />
+            ))}
+          </div>
         </div>
       ))}
     </div>

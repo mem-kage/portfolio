@@ -2,7 +2,9 @@
   "app": [
     {
       "id": 1,
-      "title": "The Dark Knight",
+      "title": "きやらめるちゃん",
+      "description": "お菓子のキャラメルの擬人化である「きやらめるちゃん」と一緒に遊べるWebアプリ",
+      "program": ["react.js", "typescript"],
       "tag": "app"
     },
     {
